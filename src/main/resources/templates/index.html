@@ -1,0 +1,25 @@
+<div th:switch="${titles}" xmlns:th="http://www.w3.org/1999/xhtml">
+    <div th:case="*">
+        <h2>Titles</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title name</th>
+                <th>Description</th>
+                <th>Age</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="title : ${titles}">
+                <td th:text="${title.id}"></td>
+                <td th:text="${title.titleName}"></td>
+                <td th:text="${title.description}"></td>
+                <td th:text="${title.age}"></td>
+                <td><a th:href="@{/delete/{id}(id=${title.id})}">Delete</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <p><a href="/title">Add a new Title</a></p>
+</div>

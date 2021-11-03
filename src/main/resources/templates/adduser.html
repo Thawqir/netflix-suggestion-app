@@ -1,0 +1,10 @@
+<p>Add new title</p>
+<form action="#" th:action="@{/addtitle}" th:object="${title}" method="post" xmlns:th="http://www.w3.org/1999/xhtml">
+    <label for="title">Title Name</label>
+    <input type="text" th:field="*{titleName}" id="title" placeholder="Title">
+    <label for="description">Description</label>
+    <input type="text" th:field="*{description}" id="description" placeholder="description">
+    <label for="age">Age</label>
+    <input type="text" th:field="*{age}" id="age" placeholder="age">
+    <input type="submit" value="Add Title">
+</form>
